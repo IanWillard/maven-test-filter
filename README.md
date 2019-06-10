@@ -10,6 +10,7 @@ These variables may be passed to JUnit configuration groups.
 A test case OR test suite may be annotated with, eg: @Category(DB.class)
 
 Categories may be defined in the pom.xml, eg:
+```
   <configuration>
     <categories>
       <category>slow=org.ian.tools.maven.test.groups.Slow</category>
@@ -17,6 +18,7 @@ Categories may be defined in the pom.xml, eg:
       <category>db=org.ian.tools.maven.test.groups.DB</category>
     </categories>
   </configuration>
+```
   
 This is shorthand=classname or csv list of classnames
 
