@@ -38,19 +38,25 @@
             <category>db=org.ian.tools.maven.test.groups.DB</category>
           </categories>
         </configuration>
+        <executions>
+          <execution>
+            <id>test-filter</id>
+            <goals>
+              <goal>test-filter</goal>
+            </goals>
+            <phase>validate</phase>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>3.0.0-M3</version>
-      <configuration>
- <!--       <includes>
-          <include>**/*Tests.java</include>
-        </includes>    -->
-        <groups>${includedTestGroups}</groups>
-        <excludedGroups>${excludedTestGroups}</excludedGroups>
-      </configuration>
-    </plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M3</version>
+        <configuration>
+          <groups>${includedTestGroups}</groups>
+          <excludedGroups>${excludedTestGroups}</excludedGroups>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>

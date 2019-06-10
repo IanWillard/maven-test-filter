@@ -13,7 +13,7 @@ public class TestFilter {
             for (String def : definitions) {
                 String[] components = def.split("=");
                 if (components.length != 2) {
-                    throw new IllegalArgumentException("Category definitions must be of the form 'shorthand=classname'");
+                    throw new IllegalArgumentException("Category definitions must be of the form 'shorthand=classname' or 'shorthand=classname1,classname2,...'");
                 }
                 groups.put(components[0], components[1]);
             }
@@ -32,7 +32,7 @@ public class TestFilter {
                     if (isExcluded(filter)) {
                         excluded.add(filter.replaceFirst("-", ""));
                     } else {
-                        included.add(filter);
+                        included.add(filter.replaceFirst("\\+", ""));
                     }
                 }
             }

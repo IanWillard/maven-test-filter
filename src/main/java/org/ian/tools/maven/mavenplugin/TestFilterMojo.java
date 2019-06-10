@@ -48,7 +48,7 @@ public class TestFilterMojo extends AbstractMojo {
     public void execute() throws MojoExecutionException, MojoFailureException {
 
         if (this.skip) {
-            getLog().info("Skipping");
+            getLog().info("Skipping Test Filters");
             return;
         }
 
@@ -74,8 +74,10 @@ public class TestFilterMojo extends AbstractMojo {
         TestFilter filterParser = new TestFilter(definitions);
         FilterGroups result = filterParser.select(selections);
 
-        getLog().info("filter includes " + result.getIncludedCount());
-        getLog().info("filter excludes " + result.getExcludedCount());
+        getLog().info("filter includes n=" + result.getIncludedCount());
+        getLog().debug("filter includes " + result.getIncludedGroups());
+        getLog().info("filter excludes n=" + result.getExcludedCount());
+        getLog().debug("filter excludes " + result.getExcludedGroups());
 
         this.mavenProject.getProperties().setProperty("includedTestGroups", result.getIncludedGroups());
         this.mavenProject.getProperties().setProperty("excludedTestGroups", result.getExcludedGroups());
