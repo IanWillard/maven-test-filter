@@ -1,4 +1,4 @@
-# maven-test-filter
+# test-filter-maven-plugin
 Provides simple shorthand methods of defining filtering of tests based on arbitrary annotations.
 
 # Usage
