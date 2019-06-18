@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.ian.tools.maven.test.groups</groupId>
-  <artifactId>maven-filter-test</artifactId>
+  <groupId>com.github.ianwillard.example</groupId>
+  <artifactId>test-filter-maven-plugin</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <name>maven-filter-test</name>
+  <name>test-filter-maven-plugin</name>
 
   <dependencies>
     <dependency>
-      <groupId>org.ian.tools.maven</groupId>
+      <groupId>com.github.ianwillard</groupId>
       <artifactId>test-filter-maven-plugin</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>
@@ -28,14 +28,14 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.ian.tools.maven</groupId>
+        <groupId>com.github.ianwillard</groupId>
         <artifactId>test-filter-maven-plugin</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <configuration>
           <categories>
-            <category>slow=org.ian.tools.maven.test.groups.Slow</category>
-            <category>fast=org.ian.tools.maven.test.groups.Fast</category>
-            <category>db=org.ian.tools.maven.test.groups.DB</category>
+            <category>slow=com.github.ianwillard.example.test.groups.Slow</category>
+            <category>fast=com.github.ianwillard.example.test.groups.Fast</category>
+            <category>db=com.github.ianwillard.example.test.groups.DB</category>
           </categories>
         </configuration>
         <executions>

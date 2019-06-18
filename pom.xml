@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.ian.tools.maven</groupId>
+  <groupId>com.github.ianwillard</groupId>
   <artifactId>test-filter-maven-plugin</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
   <name>test-filter-maven-plugin</name>
-  <description>Provides natural language filtering of tests based on arbitrary annotations</description>
+  <description>Provides simple shorthand methods of defining filtering of tests based on arbitrary annotations</description>
 
   <dependencies>
     <dependency>
